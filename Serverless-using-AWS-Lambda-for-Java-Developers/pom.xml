@@ -12,6 +12,7 @@
   <modules>
     <module>Section-01-Introduction</module>
     <module>Section-02-The-Fundamentals</module>
+    <module>Section-03-Tools-of-trade</module>
   </modules>
 
   <properties>
