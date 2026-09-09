@@ -15,8 +15,8 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0440d3b780d96b29d  # Ensure this AMI ID is valid for your region
-      InstanceType: t2.micro
+      ImageId: ami-090d68841c2a28756  # Ensure this AMI ID is valid for your region
+      InstanceType: t3.micro
       SecurityGroups:
         - !Ref InstanceSecurityGroup
 
@@ -36,4 +36,4 @@ Resources:
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: my-unique-bucket-name-4rw3dda34  # Ensure this is globally unique
+      BucketName: my-unique-bucket-name-4rw3dda3408092026  # Ensure this is globally unique
