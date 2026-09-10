@@ -13,6 +13,10 @@
     <module>Section-01-Introduction</module>
     <module>Section-02-The-Fundamentals</module>
     <module>Section-03-Tools-of-trade</module>
+    <module>Section-04-Create-a-Serverless-Project</module>
+    <module>Section-05-Parameters-and-Return-types</module>
+    <module>Section-06-Create-Serverless-API</module>
+    <module>Section-07-Asynchronous-Usecase</module>
   </modules>
 
   <properties>

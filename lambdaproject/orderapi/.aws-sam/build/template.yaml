@@ -1,0 +1,96 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'orderapi
+
+  Sample SAM Template for orderapi
+
+  '
+Globals:
+  Function:
+    Timeout: 20
+    MemorySize: 512
+    Environment:
+      Variables:
+        ORDERS_TABLE:
+          Ref: OrdersTable
+Resources:
+  OrdersTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Orders
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: N
+      KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+  CreateOrderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: CreateOrderFunction
+      Handler: com.tutorials.sid.spring.CreateOrderLambda::createOrder
+      Runtime: java21
+      Architectures:
+      - x86_64
+      Environment:
+        Variables:
+          ORDERS_TABLE:
+            Ref: OrdersTable
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: OrdersTable
+      Events:
+        CreateOrderApiEvent:
+          Type: Api
+          Properties:
+            Path: /orders
+            Method: POST
+    Metadata:
+      SamResourceId: CreateOrderFunction
+  ReadOrderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ReadOrderFunction
+      Handler: com.tutorials.sid.spring.ReadOrdersLambda::getOrders
+      Runtime: java21
+      Architectures:
+      - x86_64
+      Environment:
+        Variables:
+          ORDERS_TABLE:
+            Ref: OrdersTable
+      Policies:
+      - DynamoDBReadPolicy:
+          TableName:
+            Ref: OrdersTable
+      Events:
+        ReadOrdersApiEvent:
+          Type: Api
+          Properties:
+            Path: /orders
+            Method: GET
+    Metadata:
+      SamResourceId: ReadOrderFunction
+Outputs:
+  CreateOrderApi:
+    Description: API Gateway endpoint URL for Prod stage
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/orders/
+  CreateOrderFunction:
+    Description: Create Order Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - CreateOrderFunction
+      - Arn
+  CreateOrderFunctionIamRole:
+    Description: Create Order Lambda Function IAM Role ARN
+    Value:
+      Fn::GetAtt:
+      - CreateOrderFunctionRole
+      - Arn
+  OrdersTable:
+    Description: DynamoDB Orders Table Name
+    Value:
+      Ref: OrdersTable

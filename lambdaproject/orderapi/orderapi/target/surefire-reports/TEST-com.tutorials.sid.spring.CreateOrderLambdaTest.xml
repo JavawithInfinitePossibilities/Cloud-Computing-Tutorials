@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tutorials.sid.spring.CreateOrderLambdaTest" time="0.029" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi\target\test-classes;E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi\target\classes;E:\local_lib\com\amazonaws\aws-lambda-java-core\1.2.2\aws-lambda-java-core-1.2.2.jar;E:\local_lib\com\amazonaws\aws-lambda-java-events\3.11.0\aws-lambda-java-events-3.11.0.jar;E:\local_lib\joda-time\joda-time\2.6\joda-time-2.6.jar;E:\local_lib\software\amazon\awssdk\dynamodb-enhanced\2.28.11\dynamodb-enhanced-2.28.11.jar;E:\local_lib\software\amazon\awssdk\aws-core\2.28.11\aws-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-spi\2.28.11\http-auth-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\identity-spi\2.28.11\identity-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth\2.28.11\http-auth-2.28.11.jar;E:\local_lib\software\amazon\awssdk\profiles\2.28.11\profiles-2.28.11.jar;E:\local_lib\software\amazon\awssdk\metrics-spi\2.28.11\metrics-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\endpoints-spi\2.28.11\endpoints-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\retries-spi\2.28.11\retries-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\retries\2.28.11\retries-2.28.11.jar;E:\local_lib\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;E:\local_lib\software\amazon\awssdk\json-utils\2.28.11\json-utils-2.28.11.jar;E:\local_lib\software\amazon\awssdk\third-party-jackson-core\2.28.11\third-party-jackson-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-client-spi\2.28.11\http-client-spi-2.28.11.jar;E:\local_lib\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;E:\local_lib\software\amazon\awssdk\sdk-core\2.28.11\sdk-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-aws\2.28.11\http-auth-aws-2.28.11.jar;E:\local_lib\software\amazon\awssdk\checksums-spi\2.28.11\checksums-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\checksums\2.28.11\checksums-2.28.11.jar;E:\local_lib\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;E:\local_lib\software\amazon\awssdk\auth\2.28.11\auth-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-aws-eventstream\2.28.11\http-auth-aws-eventstream-2.28.11.jar;E:\local_lib\software\amazon\awssdk\regions\2.28.11\regions-2.28.11.jar;E:\local_lib\software\amazon\awssdk\dynamodb\2.28.11\dynamodb-2.28.11.jar;E:\local_lib\software\amazon\awssdk\aws-json-protocol\2.28.11\aws-json-protocol-2.28.11.jar;E:\local_lib\software\amazon\awssdk\protocol-core\2.28.11\protocol-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\apache-client\2.28.11\apache-client-2.28.11.jar;E:\local_lib\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;E:\local_lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\local_lib\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;E:\local_lib\commons-codec\commons-codec\1.17.1\commons-codec-1.17.1.jar;E:\local_lib\software\amazon\awssdk\netty-nio-client\2.28.11\netty-nio-client-2.28.11.jar;E:\local_lib\io\netty\netty-codec-http\4.1.112.Final\netty-codec-http-4.1.112.Final.jar;E:\local_lib\io\netty\netty-codec-http2\4.1.112.Final\netty-codec-http2-4.1.112.Final.jar;E:\local_lib\io\netty\netty-codec\4.1.112.Final\netty-codec-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport\4.1.112.Final\netty-transport-4.1.112.Final.jar;E:\local_lib\io\netty\netty-common\4.1.112.Final\netty-common-4.1.112.Final.jar;E:\local_lib\io\netty\netty-buffer\4.1.112.Final\netty-buffer-4.1.112.Final.jar;E:\local_lib\io\netty\netty-handler\4.1.112.Final\netty-handler-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport-native-unix-common\4.1.112.Final\netty-transport-native-unix-common-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport-classes-epoll\4.1.112.Final\netty-transport-classes-epoll-4.1.112.Final.jar;E:\local_lib\io\netty\netty-resolver\4.1.112.Final\netty-resolver-4.1.112.Final.jar;E:\local_lib\software\amazon\awssdk\annotations\2.28.11\annotations-2.28.11.jar;E:\local_lib\software\amazon\awssdk\utils\2.28.11\utils-2.28.11.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;E:\local_lib\junit\junit\4.13.2\junit-4.13.2.jar;E:\local_lib\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.10\bin"/>
+    <property name="sun.java.command" value="C:\Users\kunmu\AppData\Local\Temp\surefire16625358449928424389\surefirebooter-20260910015355809_3.jar C:\Users\kunmu\AppData\Local\Temp\surefire16625358449928424389 2026-09-10T01-53-55_716-jvmRun1 surefire-20260910015355809_1tmp surefire_0-20260910015355809_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi\target\test-classes;E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi\target\classes;E:\local_lib\com\amazonaws\aws-lambda-java-core\1.2.2\aws-lambda-java-core-1.2.2.jar;E:\local_lib\com\amazonaws\aws-lambda-java-events\3.11.0\aws-lambda-java-events-3.11.0.jar;E:\local_lib\joda-time\joda-time\2.6\joda-time-2.6.jar;E:\local_lib\software\amazon\awssdk\dynamodb-enhanced\2.28.11\dynamodb-enhanced-2.28.11.jar;E:\local_lib\software\amazon\awssdk\aws-core\2.28.11\aws-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-spi\2.28.11\http-auth-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\identity-spi\2.28.11\identity-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth\2.28.11\http-auth-2.28.11.jar;E:\local_lib\software\amazon\awssdk\profiles\2.28.11\profiles-2.28.11.jar;E:\local_lib\software\amazon\awssdk\metrics-spi\2.28.11\metrics-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\endpoints-spi\2.28.11\endpoints-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\retries-spi\2.28.11\retries-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\retries\2.28.11\retries-2.28.11.jar;E:\local_lib\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;E:\local_lib\software\amazon\awssdk\json-utils\2.28.11\json-utils-2.28.11.jar;E:\local_lib\software\amazon\awssdk\third-party-jackson-core\2.28.11\third-party-jackson-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-client-spi\2.28.11\http-client-spi-2.28.11.jar;E:\local_lib\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;E:\local_lib\software\amazon\awssdk\sdk-core\2.28.11\sdk-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-aws\2.28.11\http-auth-aws-2.28.11.jar;E:\local_lib\software\amazon\awssdk\checksums-spi\2.28.11\checksums-spi-2.28.11.jar;E:\local_lib\software\amazon\awssdk\checksums\2.28.11\checksums-2.28.11.jar;E:\local_lib\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;E:\local_lib\software\amazon\awssdk\auth\2.28.11\auth-2.28.11.jar;E:\local_lib\software\amazon\awssdk\http-auth-aws-eventstream\2.28.11\http-auth-aws-eventstream-2.28.11.jar;E:\local_lib\software\amazon\awssdk\regions\2.28.11\regions-2.28.11.jar;E:\local_lib\software\amazon\awssdk\dynamodb\2.28.11\dynamodb-2.28.11.jar;E:\local_lib\software\amazon\awssdk\aws-json-protocol\2.28.11\aws-json-protocol-2.28.11.jar;E:\local_lib\software\amazon\awssdk\protocol-core\2.28.11\protocol-core-2.28.11.jar;E:\local_lib\software\amazon\awssdk\apache-client\2.28.11\apache-client-2.28.11.jar;E:\local_lib\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;E:\local_lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\local_lib\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;E:\local_lib\commons-codec\commons-codec\1.17.1\commons-codec-1.17.1.jar;E:\local_lib\software\amazon\awssdk\netty-nio-client\2.28.11\netty-nio-client-2.28.11.jar;E:\local_lib\io\netty\netty-codec-http\4.1.112.Final\netty-codec-http-4.1.112.Final.jar;E:\local_lib\io\netty\netty-codec-http2\4.1.112.Final\netty-codec-http2-4.1.112.Final.jar;E:\local_lib\io\netty\netty-codec\4.1.112.Final\netty-codec-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport\4.1.112.Final\netty-transport-4.1.112.Final.jar;E:\local_lib\io\netty\netty-common\4.1.112.Final\netty-common-4.1.112.Final.jar;E:\local_lib\io\netty\netty-buffer\4.1.112.Final\netty-buffer-4.1.112.Final.jar;E:\local_lib\io\netty\netty-handler\4.1.112.Final\netty-handler-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport-native-unix-common\4.1.112.Final\netty-transport-native-unix-common-4.1.112.Final.jar;E:\local_lib\io\netty\netty-transport-classes-epoll\4.1.112.Final\netty-transport-classes-epoll-4.1.112.Final.jar;E:\local_lib\io\netty\netty-resolver\4.1.112.Final\netty-resolver-4.1.112.Final.jar;E:\local_lib\software\amazon\awssdk\annotations\2.28.11\annotations-2.28.11.jar;E:\local_lib\software\amazon\awssdk\utils\2.28.11\utils-2.28.11.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;E:\local_lib\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;E:\local_lib\junit\junit\4.13.2\junit-4.13.2.jar;E:\local_lib\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\kunmu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21.0.10"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\kunmu\AppData\Local\Temp\surefire16625358449928424389\surefirebooter-20260910015355809_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
+    <property name="user.name" value="kunmu"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="E:\local_lib"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\kunmu\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="E:\Repository-Latest-02-Intellij-22072026\JavawithInfPos\Cloud-Computing-Tutorials\lambdaproject\orderapi\orderapi"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk-21.0.10\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\kunmu\Downloads\Software\apache-maven-3.9.12-bin\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Users\kunmu\Downloads\Software\confluent-8.2.0\libexec\cli\windows_amd64;%CONFLUENT_HOM%bin\windows;C:\Users\kunmu\.local\bin;C:\Program Files\Meld\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\kunmu\AppData\Local\Microsoft\WindowsApps;C:\Users\kunmu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kunmu\AppData\Roaming\npm;C:\Users\kunmu\Downloads\Software\apache-maven-3.9.12-bin\bin;E:\kafka\bin\windows;C:\Users\kunmu\Downloads\Software\confluent-8.2.0\libexec\cli\windows_amd64;C:\Users\kunmu\Downloads\Software\confluent-8.2.0\bin;C:\Users\kunmu\.local\bin;;C:\Users\kunmu\AppData\Local\Programs\Ollama;C:\Users\kunmu\AppData\Local\Kiro-Cli\;C:\Users\kunmu\AppData\Local\Programs\DockerDesktop\resources\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.10+8-LTS-217"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="warning" classname="junit.framework.TestSuite$1" time="0.005">
+    <failure message="No tests found in com.tutorials.sid.spring.CreateOrderLambdaTest" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: No tests found in com.tutorials.sid.spring.CreateOrderLambdaTest
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:223)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:96)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+</testsuite>

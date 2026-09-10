@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Log4j2 configuration for AWS Lambda with aws-lambda-java-log4j2 v1.6.0
+    and log4j2 v2.24.3 / slf4j2 (log4j-slf4j2-impl).
+
+    The Lambda appender routes all log output through the Lambda runtime's
+    internal logging mechanism so logs appear in CloudWatch Logs.
+-->
+<Configuration status="WARN">
+    <Appenders>
+        <Lambda name="Lambda">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %X{AWSRequestId} %-5p %c{1} - %m%n</Pattern>
+            </PatternLayout>
+        </Lambda>
+    </Appenders>
+    <Loggers>
+        <!-- Root logger: INFO and above go to CloudWatch via Lambda appender -->
+        <Root level="INFO">
+            <AppenderRef ref="Lambda"/>
+        </Root>
+
+        <!-- Suppress verbose SDK v2 HTTP/retry noise at WARN -->
+        <Logger name="software.amazon.awssdk" level="WARN" additivity="false">
+            <AppenderRef ref="Lambda"/>
+        </Logger>
+
+        <!-- Keep SDK request-level detail at DEBUG for troubleshooting -->
+        <Logger name="software.amazon.awssdk.request" level="DEBUG" additivity="false">
+            <AppenderRef ref="Lambda"/>
+        </Logger>
+    </Loggers>
+</Configuration>

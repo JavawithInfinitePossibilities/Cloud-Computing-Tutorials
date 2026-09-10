@@ -1,0 +1,25 @@
+package com.tutorial.sid.spring.bean;
+
+/**
+ * @author kunmu On 09-09-2026
+ */
+public class Patient {
+    private String name;
+    private String ssn;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+}

@@ -1,0 +1,56 @@
+# ===========================
+# Maven
+# ===========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# ===========================
+# Java
+# ===========================
+*.log
+hs_err_pid*
+replay_pid*
+
+# ===========================
+# AWS SAM / Lambda
+# ===========================
+.aws-sam/
+samconfig.toml
+packaged.yaml
+packaged-template.yaml
+
+# ===========================
+# IDE - IntelliJ IDEA
+# ===========================
+.idea/
+!.idea/.gitignore
+*.iml
+*.ipr
+*.iws
+out/
+
+# ===========================
+# IDE - Eclipse
+# ===========================
+.classpath
+.project
+.settings/
+
+# ===========================
+# IDE - VS Code
+# ===========================
+.vscode/
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
